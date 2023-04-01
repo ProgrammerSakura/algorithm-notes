@@ -40,6 +40,9 @@ class Sort {
                         a[j + 1] = a[j];  // 所有大于temp的元素都往后移
                         j--;
                     }
+                    // for (int j = i - 1; j >= 0 && a[j] > temp; j--) {
+                    //     a[j + 1] = a[j];  // 所有大于temp的元素都往后移
+                    // }
                     // 跳出循环后a[j] <= temp 或 j < 0，故插入位置为j+1
                     a[j + 1] = temp;
                 }
@@ -184,13 +187,14 @@ int main() {
 
     // sort.selection_sort(a, N);
     // sort.insert_sort(a, N);
-    // sort.bubble_sort1(a, N);
+    sort.bubble_sort1(a, N);
     // sort.bubble_sort2(a, N);
     // sort.merge_sort(a, 0, 9);
-    sort.quick_sort(a, 0, 9);
+    // sort.quick_sort(a, 0, 9);
     sort.sort_show(a, N);
 
 
 
     return 0;
 }
+
